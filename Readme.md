@@ -116,7 +116,8 @@ Para este caso de analisis de esta arquitectura por capas implementamos el flujo
 
 Para abordar este requerimiento desde una perspectiva de Domain-Driven Design (DDD), podemos identificar dos entidades principales en el contexto del problema: Product y Category. Cada una de estas entidades tiene su propia identidad y atributos específicos que se relacionan entre sí en el dominio del comercio electrónico.
 
-![image](https://github.com/user-attachments/assets/ca2b3bbd-cb90-4ace-ac0e-23cd8fab574d)
+![image](https://github.com/user-attachments/assets/76478801-c514-4952-a003-3f459d8a26f0)
+
 
 
 Product (Producto)
