@@ -12,7 +12,7 @@ Para este ejercicio, usaremos las siguientes métricas, pero puede que se quiera
 
 El listado de productos es el siguiente: 
 
-![image](https://github.com/user-attachments/assets/5f095dc6-0c6b-49c2-acb7-7a6314a134b0)
+![image](https://github.com/user-attachments/assets/147bddcd-8064-49e7-b73a-be3fe6b3d7a2)
 
 
 El algoritmo de ordenación debe exponerse a través de un servicio REST de manera que reciba las 
@@ -55,7 +55,7 @@ Url de pruebas para la Api = http://localhost:8080/api/products/sorted?categoryI
 
 Ejemplo
 
-![productsget](https://github.com/user-attachments/assets/f4639ff3-c7ad-4b2c-b27f-0c0180384a41)
+![productsget](https://github.com/user-attachments/assets/a0aeeb78-6a72-441a-86cd-157084fe9424)
 
 
 parametros de entrada de las pruebas:
@@ -95,7 +95,7 @@ Las arquitecturas por capas son de gran utilidad para paliar la problemática me
 
 • Capa de infraestructura. Proporciona mecanismos para la integración con proveedores externos: persistencia de los objetos de dominio, comunicación mediante mensajes, etc.
 
-![hexa1](https://github.com/user-attachments/assets/172ae371-8f34-4fe3-bb84-8ca8fea521f6)
+![hexa1](https://github.com/user-attachments/assets/9a2e1638-fa1e-471f-99bf-51bece0bda5d)
 
 
 Es necesario concentrar todo el código relativo al modelado de dominio en una única capa y aislarla del resto de tareas asociadas. Los componentes de la capa de dominio no tienen como responsabilidad mostrar información al usuario, persistir sus propios datos, etc.
@@ -104,12 +104,14 @@ Los beneficios que se contienen con el uso de este tipo de arquitectura son: •
 
 Para el diseño de aplicación que siguen el patrón DDD se suele utilizar la arquitectura hexagonal ya que aísla el modelado del dominio de los componentes externos. Este aislamiento permite que los cambios en los componentes externos no afecten al modelado del dominio. Los cambios en el dominio solo deben permitirse cuando son realizados por criterios del negocio. Los puertos son una definición del contrato público y los adaptadores son la implementación de un puerto para un contexto en concreto.
 
-![hexa2](https://github.com/user-attachments/assets/9f9848c6-b589-4286-b28c-96bf55be845b)
+![hexa2](https://github.com/user-attachments/assets/2eac928a-a45a-44b1-9570-60d64438947b)
+
 
 
 Para este caso de analisis de esta arquitectura por capas implementamos el flujo de una petición REST en la arquitectura hexagonal en donde el controlador forma parte de la capa de infraestructura y delega en un servicio de la capa aplicación la ejecución de la acción requerida por el usuario. El servicio de la capa de aplicación representa el caso de uso de manera atómica y coordina con ayuda de los elementos de la capa de dominio las tareas asociadas a este.
 
-![hexa3](https://github.com/user-attachments/assets/a667feb5-9d88-40be-9633-c477d8bbd479)
+![hexa3](https://github.com/user-attachments/assets/34b1b8e5-c529-4c5d-a6f3-da4c609fc109)
+
 
 
 Para abordar este requerimiento desde una perspectiva de Domain-Driven Design (DDD), podemos identificar dos entidades principales en el contexto del problema: Product y Category. Cada una de estas entidades tiene su propia identidad y atributos específicos que se relacionan entre sí en el dominio del comercio electrónico.
